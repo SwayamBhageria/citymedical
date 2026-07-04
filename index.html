@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ============================================================= -->
+  <!-- MUST MATCH THE GOOGLE BUSINESS PROFILE EXACTLY:               -->
+  <!--   1. Business name   2. Address   3. Phone   4. Hours         -->
+  <!-- Search this file for  [[GBP]]  to find every spot to update.  -->
+  <!-- ============================================================= -->
+  <title>City Medical — Family Clinic &amp; General Practice</title>
+  <meta name="description" content="City Medical is a family clinic offering general medicine, consultations, health check-ups and preventive care. Book an appointment today." />
+  <style>
+    :root {
+      --brand: #0b7285;
+      --brand-dark: #095663;
+      --ink: #1a2b32;
+      --muted: #5a6b72;
+      --bg: #f6fbfc;
+      --card: #ffffff;
+      --line: #e2edf0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink); background: var(--bg); line-height: 1.6;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    .btn {
+      display: inline-block; background: var(--brand); color: #fff;
+      padding: 12px 22px; border-radius: 8px; font-weight: 600;
+      transition: background .15s;
+    }
+    .btn:hover { background: var(--brand-dark); }
+    .btn.outline { background: transparent; color: var(--brand); border: 1.5px solid var(--brand); }
+    .btn.outline:hover { background: var(--brand); color: #fff; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.95);
+      backdrop-filter: blur(6px); border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.2rem; color: var(--ink); }
+    .logo .mark {
+      width: 34px; height: 34px; border-radius: 8px; background: var(--brand);
+      display: grid; place-items: center; color: #fff; font-weight: 800;
+    }
+    .nav-links { display: flex; gap: 26px; align-items: center; }
+    .nav-links a { color: var(--muted); font-weight: 500; }
+    .nav-links a:hover { color: var(--brand); }
+    .nav-links .btn { color: #fff; }
+    @media (max-width: 720px) { .nav-links a:not(.btn) { display: none; } }
+
+    /* Hero */
+    .hero { padding: 72px 0 60px; }
+    .hero h1 { font-size: 2.6rem; line-height: 1.15; letter-spacing: -.5px; }
+    .hero p.lead { font-size: 1.18rem; color: var(--muted); margin: 18px 0 28px; max-width: 620px; }
+    .hero .cta { display: flex; gap: 14px; flex-wrap: wrap; }
+    .badges { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 34px; color: var(--muted); font-size: .95rem; }
+    .badges span { display: flex; align-items: center; gap: 8px; }
+    @media (max-width: 720px) { .hero h1 { font-size: 2rem; } }
+
+    /* Sections */
+    section { padding: 56px 0; }
+    .section-title { font-size: 1.7rem; letter-spacing: -.3px; margin-bottom: 8px; }
+    .section-sub { color: var(--muted); margin-bottom: 34px; max-width: 620px; }
+
+    .grid { display: grid; gap: 20px; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: 1.2fr 1fr; align-items: start; }
+    @media (max-width: 820px) { .grid-3 { grid-template-columns: 1fr; } .grid-2 { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+      padding: 26px; transition: box-shadow .15s, transform .15s;
+    }
+    .card:hover { box-shadow: 0 8px 26px rgba(11,114,133,.08); transform: translateY(-2px); }
+    .card .ic { font-size: 1.6rem; margin-bottom: 12px; }
+    .card h3 { font-size: 1.12rem; margin-bottom: 6px; }
+    .card p { color: var(--muted); font-size: .96rem; }
+
+    .about-bg { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+    /* Hours + Contact */
+    .hours-list { list-style: none; }
+    .hours-list li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .hours-list li:last-child { border-bottom: none; }
+    .hours-list .day { font-weight: 600; }
+    .contact-box { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 26px; }
+    .contact-box p { margin-bottom: 12px; color: var(--muted); }
+    .contact-box strong { color: var(--ink); }
+
+    footer { background: var(--ink); color: #c7d6db; padding: 40px 0; margin-top: 20px; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    footer a { color: #9fd0da; }
+    .disclaimer { font-size: .82rem; color: #8aa0a8; margin-top: 8px; max-width: 640px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <div class="logo"><span class="mark">C</span> City Medical <!-- [[GBP]] name --></div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#hours">Hours</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="tel:+910000000000"><!-- [[GBP]] phone -->Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Trusted family healthcare,<br />close to home.</h1>
+      <p class="lead">City Medical is a neighbourhood clinic providing general medicine, routine
+        consultations, health check-ups and preventive care for patients of all ages.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">Book an Appointment</a>
+        <a class="btn outline" href="tel:+910000000000"><!-- [[GBP]] phone -->Call the Clinic</a>
+      </div>
+      <div class="badges">
+        <span>🩺 General Practice</span>
+        <span>⏱️ Walk-ins Welcome</span>
+        <span>📍 Easy to reach</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-sub">Comprehensive primary care for you and your family, all under one roof.</p>
+      <div class="grid grid-3">
+        <div class="card"><div class="ic">🩺</div><h3>General Consultation</h3><p>Diagnosis and treatment for everyday illnesses, fever, infections and ongoing conditions.</p></div>
+        <div class="card"><div class="ic">❤️</div><h3>Health Check-ups</h3><p>Routine physical exams, blood pressure, sugar and general wellness screening.</p></div>
+        <div class="card"><div class="ic">💉</div><h3>Vaccinations</h3><p>Adult and child immunisations and seasonal vaccines administered on site.</p></div>
+        <div class="card"><div class="ic">🧪</div><h3>Diagnostics</h3><p>Sample collection and coordination for common lab tests and reports.</p></div>
+        <div class="card"><div class="ic">🩹</div><h3>Minor Procedures</h3><p>Dressings, wound care, injections and other minor in-clinic treatments.</p></div>
+        <div class="card"><div class="ic">📋</div><h3>Chronic Care</h3><p>Ongoing management and follow-up for diabetes, hypertension and more.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-bg">
+    <div class="wrap">
+      <h2 class="section-title">About City Medical</h2>
+      <p class="section-sub">Caring for our community with honest, accessible medical care.</p>
+      <p style="max-width:760px;color:var(--muted);font-size:1.05rem;">
+        City Medical is a family-run clinic committed to providing quality, affordable healthcare
+        to our local community. Our experienced practitioners take the time to listen, explain, and
+        treat every patient with respect. Whether you need a quick consultation, a routine check-up,
+        or ongoing care for a long-term condition, we're here to help you stay healthy.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOURS + CONTACT -->
+  <section id="hours">
+    <div class="wrap grid grid-2">
+      <div>
+        <h2 class="section-title">Opening Hours</h2>
+        <p class="section-sub">Walk-ins welcome; appointments recommended.</p>
+        <!-- [[GBP]] hours — set these to EXACTLY match the Google Business Profile -->
+        <ul class="hours-list">
+          <li><span class="day">Monday – Friday</span><span>9:00 AM – 8:00 PM</span></li>
+          <li><span class="day">Saturday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li><span class="day">Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div id="contact">
+        <h2 class="section-title">Visit or Call Us</h2>
+        <p class="section-sub">We'd love to help you feel your best.</p>
+        <div class="contact-box">
+          <!-- [[GBP]] address -->
+          <p>📍 <strong>Address</strong><br />123 Main Street, Your City, State – 000000</p>
+          <!-- [[GBP]] phone -->
+          <p>📞 <strong>Phone</strong><br /><a href="tel:+910000000000">+91 00000 00000</a></p>
+          <p>✉️ <strong>Email</strong><br /><a href="mailto:info@citymedical.example">info@citymedical.example</a></p>
+          <a class="btn" href="#" style="margin-top:6px;">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <div class="logo" style="color:#fff;margin-bottom:8px;"><span class="mark">C</span> City Medical</div>
+        <p class="disclaimer">City Medical provides general medical services. Information on this site is
+          for general purposes only and is not a substitute for professional medical advice.</p>
+      </div>
+      <div>
+        <p>© <span id="yr"></span> City Medical. All rights reserved.</p>
+        <p style="margin-top:8px;"><a href="tel:+910000000000">Call</a> &nbsp;·&nbsp; <a href="#contact">Directions</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
