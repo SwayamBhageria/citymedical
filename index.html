@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>City Medical – Medical Store in Chakradharpur (CKP) | सिटी मेडिकल चक्रधरपुर</title>
+  <title>City Medical – Medical Store &amp; Doctors in Chakradharpur (CKP) | सिटी मेडिकल चक्रधरपुर</title>
   <meta name="description" content="City Medical (सिटी मेडिकल) – medical store at Bank of Baroda Building, Main Road, Pawan Chowk, Chakradharpur (CKP). Allopathic &amp; Ayurvedic medicines, surgical equipment, cosmetics; daily general physician; orthopaedic, skin, diabetes and neuro-psychiatry specialists. Open daily 9 AM–10 PM. Call/WhatsApp 93418 33823." />
   <meta name="google-site-verification" content="LqZGoXK2UvwWEmuE9ZazoWHVqf-NSvxHgLvM6qgClSk" />
   <link rel="canonical" href="https://swayambhageria.github.io/citymedical/" />
@@ -14,9 +14,9 @@
   <meta property="og:url" content="https://swayambhageria.github.io/citymedical/" />
   <meta property="og:locale" content="en_IN" />
   <meta property="og:locale:alternate" content="hi_IN" />
-  <meta property="og:image" content="https://swayambhageria.github.io/citymedical/img/city-medical-signboard.jpg" />
-  <meta property="og:image:width" content="848" />
-  <meta property="og:image:height" content="480" />
+  <meta property="og:image" content="https://swayambhageria.github.io/citymedical/img/city-medical-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
   <meta property="og:image:alt" content="City Medical, Chemist &amp; Druggist signboard, Chakradharpur" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="geo.region" content="IN-JH" />
@@ -51,7 +51,7 @@
     }],
     "hasMap": "https://maps.google.com/?cid=2563217944638634121",
     "sameAs": ["https://maps.google.com/?cid=2563217944638634121"],
-    "image": ["https://swayambhageria.github.io/citymedical/img/city-medical-signboard.jpg", "https://swayambhageria.github.io/citymedical/img/city-medical-inside.jpg", "https://swayambhageria.github.io/citymedical/img/city-medical-doctor-room.jpg"],
+    "image": ["https://swayambhageria.github.io/citymedical/img/city-medical-cover.jpg", "https://swayambhageria.github.io/citymedical/img/city-medical-signboard.jpg", "https://swayambhageria.github.io/citymedical/img/city-medical-inside.jpg", "https://swayambhageria.github.io/citymedical/img/city-medical-doctor-room.jpg"],
     "logo": "https://swayambhageria.github.io/citymedical/logo.svg",
     "areaServed": ["Chakradharpur", "West Singhbhum"]
   }
@@ -119,7 +119,7 @@
     @media (max-width: 700px) { .board-call { display: none; } }
 
     /* ---------- hero ---------- */
-    .hero { padding-block: 30px 10px; display: grid; gap: 18px; }
+    .hero { padding-block: 22px 6px; display: grid; gap: 14px; }
     .status { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px 6px 10px; width: fit-content; font-size: .95rem; }
     .dot { width: 11px; height: 11px; border-radius: 50%; background: var(--muted); }
     .status.is-open .dot { background: var(--open); box-shadow: 0 0 0 4px color-mix(in srgb, var(--open) 22%, transparent); }
@@ -134,11 +134,28 @@
     .btn-call { background: var(--call); color: var(--call-ink); }
     .btn-wa { background: var(--wa); color: var(--wa-ink); }
     .btn-map { background: var(--surface); color: var(--ink); border-color: var(--line); }
+    @media (max-width: 700px) { .actions { display: grid; grid-template-columns: 1fr 1fr; } .actions .btn-map { display: none; } .btn { padding: 10px 14px; } }
+    .nw { white-space: nowrap; }
+    .doc .ills { color: var(--muted); font-size: .92rem; line-height: 1.5; }
 
     .hero { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; column-gap: 32px; }
     .hero > * { grid-column: 1; }
-    .hero .shopfront { grid-column: 2; grid-row: 1 / span 4; }
-    @media (max-width: 820px) { .hero { grid-template-columns: 1fr; } .hero .shopfront { grid-column: 1; grid-row: auto; } }
+    .hero .today-box { grid-column: 2; grid-row: 1 / span 4; }
+    @media (max-width: 820px) { .hero { grid-template-columns: 1fr; } .hero .today-box { grid-column: 1; grid-row: auto; } }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .offer { display: inline-flex; align-items: center; font-weight: 600; font-size: .95rem; border-radius: 999px; padding: 6px 14px; background: var(--call); color: var(--call-ink); }
+    .today-box { padding: 18px 20px; border: 2px solid var(--cross); display: grid; gap: 12px; }
+    .today-box h2 { font-size: 1.45rem; font-weight: 800; }
+    .today-box h2 .en { font-size: .6em; }
+    .today-box ul { list-style: none; display: grid; gap: 10px; }
+    .today-box li { display: grid; gap: 1px; padding-top: 10px; border-top: 1px solid var(--line); }
+    .today-box li b { font-family: var(--display); font-size: 1.2rem; line-height: 1.2; }
+    .today-box li span { color: var(--muted); font-size: .92rem; }
+    .today-box li .t { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+    .today-box a { font-weight: 600; color: var(--board); }
+    :root[data-theme="dark"] .today-box a { color: var(--cross); }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .today-box a { color: var(--cross); } }
+    .landmarks .shopfront img { aspect-ratio: 1000 / 725; }
     .shopfront img, .gallery img { width: 100%; height: auto; display: block; border-radius: 14px; aspect-ratio: 848 / 480; object-fit: cover; background: var(--line); }
     figcaption { font-size: .88rem; color: var(--muted); margin-top: 8px; line-height: 1.4; }
     .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
@@ -192,10 +209,9 @@
     .doc[data-when="daily"] { grid-column: 1 / -1; }
     .doc .when { display: grid; gap: 2px; padding: 10px 12px; border-radius: 10px; background: color-mix(in srgb, var(--cross) 10%, var(--surface)); }
     .doc .when b { font-weight: 600; line-height: 1.3; }
-    .doc .when span { font-size: .88rem; color: var(--muted); }
+    .doc .when > span { font-size: .88rem; color: var(--muted); }
     .doc.is-today { border-color: var(--cross); box-shadow: 0 0 0 2px var(--cross); }
     .doc .today-tag { justify-self: start; background: var(--cross); color: #fff; font-weight: 600; font-size: .8rem; border-radius: 99px; padding: 1px 10px; }
-    .today-line { margin: -6px 0 18px; font-weight: 600; }
     .rx { margin-top: 18px; padding: 20px 22px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; border-style: dashed; border-width: 2px; }
     .rx p { min-width: 0; flex: 1 1 320px; }
     .rx b { font-family: var(--display); font-size: 1.25rem; display: block; line-height: 1.2; }
@@ -272,11 +288,13 @@
 
   <main>
     <div class="wrap hero">
-      <span class="status" id="status"><span class="dot"></span><span id="status-text"><span lang="hi">रोज़ खुला</span> · Open daily 9 AM – 10 PM</span></span>
-      <h1><span lang="hi">चक्रधरपुर का भरोसेमंद मेडिकल स्टोर</span>
-        <span class="en">Medical store in Chakradharpur (CKP) — Main Road, Pawan Chowk</span></h1>
-      <p><span lang="hi">दवाइयाँ, मेडिकल का सामान और डॉक्टर परामर्श — एक ही जगह। बैंक ऑफ बड़ौदा बिल्डिंग, मेन रोड।</span><br />
-        Medicines, medical supplies and doctor consultation in one place, in the Bank of Baroda Building on Main Road.</p>
+      <div class="chips">
+        <span class="status" id="status"><span class="dot"></span><span id="status-text"><span lang="hi">रोज़ खुला</span> · Open daily 9 AM – 10 PM</span></span>
+        <span class="offer"><span lang="hi">दवाइयों पर 15% तक छूट</span>&nbsp;· Up to 15% off</span>
+      </div>
+      <h1><span lang="hi">चक्रधरपुर में दवाइयाँ और विशेषज्ञ डॉक्टर</span>
+        <span class="en">Medical store &amp; specialist doctors in Chakradharpur (CKP)</span></h1>
+      <p><span lang="hi">बैंक ऑफ बड़ौदा बिल्डिंग, मेन रोड, पवन चौक।</span> Bank of Baroda Building, Main Road, Pawan Chowk.</p>
       <div class="actions">
         <a class="btn btn-call" href="tel:+919341833823">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
@@ -288,18 +306,67 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
           <span><span lang="hi">रास्ता देखें</span><small>Directions</small></span></a>
       </div>
-      <figure class="shopfront">
-        <img src="img/city-medical-signboard.jpg" width="848" height="480" fetchpriority="high"
-          alt="City Medical, Chemist &amp; Druggist — teal signboard on Main Road, Chakradharpur" />
-        <figcaption><b lang="hi">यही बोर्ड देखें</b> · Look for this board on Main Road</figcaption>
-      </figure>
+      <aside class="panel today-box" aria-labelledby="today-h">
+        <h2 id="today-h"><span lang="hi">आज के डॉक्टर</span><span class="en">Doctors today</span></h2>
+        <ul id="today-list">
+          <li><b>Dr. Ashok</b><span><span lang="hi">जनरल फिज़िशियन</span> · <span class="t">11 AM – 1 PM, 6 – 8 PM</span></span></li>
+        </ul>
+        <a href="#doctors"><span lang="hi">सभी डॉक्टर और उनके दिन</span> · All doctors &amp;&nbsp;days&nbsp;→</a>
+      </aside>
     </div>
+
+    <section id="doctors">
+      <div class="wrap">
+        <h2 class="sec-h"><span lang="hi">हमारे डॉक्टर</span><span class="en">Doctors at City Medical</span></h2>
+        <div class="docs">
+          <article class="panel doc" data-when="daily" data-time="11 AM – 1 PM, 6 – 8 PM">
+            <div class="spec"><span lang="hi">जनरल फिज़िशियन</span><small>General physician</small></div>
+            <h3>Dr. Ashok</h3>
+            <p class="when"><b lang="hi">रोज़ · सुबह&nbsp;<span class="nw">11 – 1</span> और शाम&nbsp;<span class="nw">6 – 8</span></b><span>Every day · <span class="nw">11 AM – 1 PM</span> and <span class="nw">6 – 8 PM</span></span></p>
+            <p class="ills"><span lang="hi">बुखार, सर्दी-खाँसी, सिरदर्द, पेट दर्द, उल्टी-दस्त, कमज़ोरी, एलर्जी, गैस-एसिडिटी, बीपी, डायबिटीज़, इन्फेक्शन</span><br />Fever, cold, cough, headache, stomach pain, allergy, acidity, BP, diabetes, infections</p>
+          </article>
+          <article class="panel doc" data-when="0" data-time="5 – 8 PM">
+            <div class="spec"><span lang="hi">शुगर (डायबिटीज़) विशेषज्ञ</span><small>Diabetologist &amp; consultant physician</small></div>
+            <h3>Dr. Shishir Kumar</h3>
+            <p class="when"><b lang="hi">हर रविवार · शाम&nbsp;<span class="nw">5 – 8</span></b><span>Every Sunday · <span class="nw">5 – 8 PM</span></span></p>
+            <p class="deg">MBBS (RIMS), MD (RIMS), CCEBDM (PHFI, New Delhi)<br />Ex Senior Resident, AIIMS · Trained in diabetes management, CMC Vellore</p>
+          </article>
+          <article class="panel doc" data-when="3" data-time="2 – 4 PM">
+            <div class="spec"><span lang="hi">चर्म रोग विशेषज्ञ</span><small>Skin (dermatology) specialist</small></div>
+            <h3>Dr. U K Jaiswal</h3>
+            <p class="when"><b lang="hi">हर बुधवार · दोपहर&nbsp;<span class="nw">2 – 4</span></b><span>Every Wednesday · <span class="nw">2 – 4 PM</span></span></p>
+            <p class="deg">MBBS (Pat.), PGCC in Skin &amp; STDs (NHS-UK)<br />Ex Resident Doctor, Dept. of Dermatology &amp; VD, AIIMS</p>
+            <ul><li><span lang="hi">त्वचा रोग</span> Skin diseases</li><li><span lang="hi">गुप्त रोग</span> Sexually transmitted diseases</li></ul>
+          </article>
+          <article class="panel doc" data-when="4:1,3" data-time="11 AM – 1 PM">
+            <div class="spec"><span lang="hi">हड्डी रोग विशेषज्ञ</span><small>Consultant orthopaedic surgeon</small></div>
+            <h3>Dr. Puneet Prakash</h3>
+            <p class="when"><b lang="hi">हर महीने का पहला और तीसरा गुरुवार · सुबह&nbsp;<span class="nw">11 – 1</span></b><span>1st &amp; 3rd Thursday of every month · <span class="nw">11 AM – 1 PM</span></span></p>
+            <p class="deg">MBBS, MS, DNB, MRCS (Glasgow), FIAS<br />Ex Senior Resident, Manipal &amp; RIMS · Ex Consultant, TMH · Reg. No. JMC 4620</p>
+            <ul><li><span lang="hi">जोड़ों का दर्द</span> Joint pain</li><li><span lang="hi">रीढ़</span> Spine</li><li>Sports injury</li><li>Trauma</li></ul>
+          </article>
+          <article class="panel doc" data-when="6:1,3" data-time="10 AM – 12 PM">
+            <div class="spec"><span lang="hi">न्यूरो और मानसिक रोग विशेषज्ञ</span><small>Neuro &amp; psychiatry</small></div>
+            <h3>Dr. Debdatta Pati</h3>
+            <p class="when"><b lang="hi">हर महीने का पहला और तीसरा शनिवार · सुबह&nbsp;<span class="nw">10 – 12</span></b><span>1st &amp; 3rd Saturday of every month · <span class="nw">10 AM – 12 PM</span></span></p>
+            <p class="deg">MBBS, DPM (Psychiatry), MD (Psychiatry), CIP Ranchi<br />Attached to B.P. Poddar Hospital, Apollo Hospital and Belle Vue Hospital, Kolkata</p>
+            <ul><li>Neuropsychiatry</li><li>Child psychiatry</li><li><span lang="hi">नशा मुक्ति</span> De-addiction</li><li>Sexology</li></ul>
+          </article>
+        </div>
+        <p class="docs-note"><span lang="hi">आने से पहले एक बार कॉल करके पक्का कर लें:</span> Please call 93418 33823 to confirm before you come.</p>
+      </div>
+    </section>
 
     <section id="find">
       <div class="wrap">
         <h2 class="sec-h"><span lang="hi">दुकान कैसे पहुँचें</span><span class="en">How to find the shop</span></h2>
         <div class="find">
           <div class="panel landmarks">
+            <figure class="shopfront">
+              <img src="img/city-medical-shopfront.jpg" width="1000" height="725" loading="lazy"
+                alt="City Medical, Chemist &amp; Druggist — teal signboard and दवाइयाँ awning on Main Road, Chakradharpur" />
+              <figcaption><b lang="hi">यही बोर्ड देखें</b> · Look for this board</figcaption>
+            </figure>
             <ol>
               <li><div><b><span lang="hi">मेन रोड पर पवन चौक आएँ</span></b><span>Come to Pawan Chowk on Main Road</span></div></li>
               <li><div><b><span lang="hi">बैंक ऑफ बड़ौदा देखें</span></b><span>Look for Bank of Baroda</span></div></li>
@@ -361,48 +428,7 @@
       </div>
     </section>
 
-    <section id="doctors">
-      <div class="wrap">
-        <h2 class="sec-h"><span lang="hi">हमारे डॉक्टर</span><span class="en">Doctors at City Medical</span></h2>
-        <p class="today-line" id="today-line"><span lang="hi">डॉक्टर रोज़ बैठते हैं — नीचे हर डॉक्टर का दिन और समय देखें।</span> A doctor sits every day. See each doctor's days below.</p>
-        <div class="docs">
-          <article class="panel doc" data-when="daily">
-            <div class="spec"><span lang="hi">जनरल फिज़िशियन</span><small>General physician</small></div>
-            <h3>Dr. Ashok</h3>
-            <p class="when"><b lang="hi">रोज़ · सुबह 11 – 1 और शाम 6 – 8</b><span>Every day · 11 AM – 1 PM and 6 – 8 PM</span></p>
-            <ul><li><span lang="hi">बुखार, सर्दी-खाँसी</span> Fever, cold, cough</li><li><span lang="hi">सिरदर्द, पेट दर्द</span> Headache, stomach pain</li><li><span lang="hi">उल्टी, दस्त</span> Vomiting, diarrhoea</li><li><span lang="hi">कमज़ोरी, थकान</span> Weakness</li><li><span lang="hi">एलर्जी, गैस, एसिडिटी</span> Allergy, acidity</li><li><span lang="hi">बीपी, डायबिटीज़</span> BP, diabetes</li><li><span lang="hi">इन्फेक्शन</span> Infections</li></ul>
-          </article>
-          <article class="panel doc" data-when="0">
-            <div class="spec"><span lang="hi">शुगर (डायबिटीज़) विशेषज्ञ</span><small>Diabetologist &amp; consultant physician</small></div>
-            <h3>Dr. Shishir Kumar</h3>
-            <p class="when"><b lang="hi">हर रविवार · शाम 5 – 8</b><span>Every Sunday · 5 – 8 PM</span></p>
-            <p class="deg">MBBS (RIMS), MD (RIMS), CCEBDM (PHFI, New Delhi)<br />Ex Senior Resident, AIIMS · Trained in diabetes management, CMC Vellore</p>
-          </article>
-          <article class="panel doc" data-when="3">
-            <div class="spec"><span lang="hi">चर्म रोग विशेषज्ञ</span><small>Skin (dermatology) specialist</small></div>
-            <h3>Dr. U K Jaiswal</h3>
-            <p class="when"><b lang="hi">हर बुधवार · दोपहर 2 – 4</b><span>Every Wednesday · 2 – 4 PM</span></p>
-            <p class="deg">MBBS (Pat.), PGCC in Skin &amp; STDs (NHS-UK)<br />Ex Resident Doctor, Dept. of Dermatology &amp; VD, AIIMS</p>
-            <ul><li><span lang="hi">त्वचा रोग</span> Skin diseases</li><li><span lang="hi">गुप्त रोग</span> Sexually transmitted diseases</li></ul>
-          </article>
-          <article class="panel doc" data-when="4:1,3">
-            <div class="spec"><span lang="hi">हड्डी रोग विशेषज्ञ</span><small>Consultant orthopaedic surgeon</small></div>
-            <h3>Dr. Puneet Prakash</h3>
-            <p class="when"><b lang="hi">हर महीने का पहला और तीसरा गुरुवार</b><span>1st &amp; 3rd Thursday of every month · call for time</span></p>
-            <p class="deg">MBBS, MS, DNB, MRCS (Glasgow), FIAS<br />Ex Senior Resident, Manipal &amp; RIMS · Ex Consultant, TMH · Reg. No. JMC 4620</p>
-            <ul><li><span lang="hi">जोड़ों का दर्द</span> Joint pain</li><li><span lang="hi">रीढ़</span> Spine</li><li>Sports injury</li><li>Trauma</li></ul>
-          </article>
-          <article class="panel doc" data-when="6:1,3">
-            <div class="spec"><span lang="hi">न्यूरो और मानसिक रोग विशेषज्ञ</span><small>Neuro &amp; psychiatry</small></div>
-            <h3>Dr. Devdatta Pati</h3>
-            <p class="when"><b lang="hi">हर महीने का पहला और तीसरा शनिवार · सुबह 10 – 12</b><span>1st &amp; 3rd Saturday of every month · 10 AM – 12 PM</span></p>
-            <p class="deg">MBBS, DPM (Psychiatry), MD (Psychiatry), CIP Ranchi<br />Attached to B.P. Poddar Hospital, Apollo Hospital and Belle Vue Hospital, Kolkata</p>
-            <ul><li>Neuropsychiatry</li><li>Child psychiatry</li><li><span lang="hi">नशा मुक्ति</span> De-addiction</li><li>Sexology</li></ul>
-          </article>
-        </div>
-        <p class="docs-note"><span lang="hi">आने से पहले एक बार कॉल करके पक्का कर लें:</span> Please call 93418 33823 to confirm before you come.</p>
-      </div>
-    </section>
+
 
     <section id="hours">
       <div class="wrap">
@@ -435,7 +461,7 @@
         <details><summary><span><span lang="hi">क्या आने से पहले दवा के बारे में पूछ सकते हैं?</span> <span class="en">Can I check if a medicine is available first?</span></span></summary>
           <p><span lang="hi">हाँ, 93418 33823 पर कॉल या WhatsApp करें, या पर्ची की फोटो भेजें।</span> Yes. Call or WhatsApp 93418 33823 with the medicine name or a photo of the prescription.</p></details>
         <details><summary><span><span lang="hi">क्या यहाँ डॉक्टर बैठते हैं?</span> <span class="en">Is a doctor available at City Medical?</span></span></summary>
-          <p><span lang="hi">हाँ। जनरल फिज़िशियन Dr. Ashok रोज़ (सुबह 11–1, शाम 6–8)। शुगर: Dr. Shishir Kumar (रविवार 5–8)। चर्म रोग: Dr. U K Jaiswal (बुधवार 2–4)। हड्डी: Dr. Puneet Prakash (पहला व तीसरा गुरुवार)। न्यूरो/मानसिक रोग: Dr. Devdatta Pati (पहला व तीसरा शनिवार 10–12)।</span> Yes. General physician Dr. Ashok daily (11 AM–1 PM, 6–8 PM); diabetes Dr. Shishir Kumar (Sun 5–8 PM); skin Dr. U K Jaiswal (Wed 2–4 PM); orthopaedics Dr. Puneet Prakash (1st &amp; 3rd Thu); neuro-psychiatry Dr. Devdatta Pati (1st &amp; 3rd Sat 10 AM–12 PM).</p></details>
+          <p><span lang="hi">हाँ। जनरल फिज़िशियन Dr. Ashok रोज़ (सुबह 11–1, शाम 6–8)। शुगर: Dr. Shishir Kumar (रविवार 5–8)। चर्म रोग: Dr. U K Jaiswal (बुधवार 2–4)। हड्डी: Dr. Puneet Prakash (पहला व तीसरा गुरुवार 11–1)। न्यूरो/मानसिक रोग: Dr. Debdatta Pati (पहला व तीसरा शनिवार 10–12)।</span> Yes. General physician Dr. Ashok daily (11 AM–1 PM, 6–8 PM); diabetes Dr. Shishir Kumar (Sun 5–8 PM); skin Dr. U K Jaiswal (Wed 2–4 PM); orthopaedics Dr. Puneet Prakash (1st &amp; 3rd Thu 11 AM–1 PM); neuro-psychiatry Dr. Debdatta Pati (1st &amp; 3rd Sat 10 AM–12 PM).</p></details>
       </div>
     </section>
   </main>
@@ -473,7 +499,7 @@
         var d = document.querySelector('#days [data-d="' + day + '"]');
         if (d) d.classList.add('today');
         var date = +new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', day: 'numeric' }).format(new Date());
-        var nth = Math.ceil(date / 7), names = [];
+        var nth = Math.ceil(date / 7), today = [], grid = document.querySelector('.docs');
         document.querySelectorAll('.doc[data-when]').forEach(function (card) {
           var w = card.getAttribute('data-when'), on;
           if (w === 'daily') on = true;
@@ -482,9 +508,14 @@
           card.classList.add('is-today');
           var tag = document.createElement('span'); tag.className = 'today-tag'; tag.innerHTML = '<span lang="hi">आज</span> · Today';
           card.insertBefore(tag, card.firstChild);
-          names.push(card.querySelector('h3').textContent);
+          today.push(card);
         });
-        if (names.length) document.getElementById('today-line').innerHTML = '<span lang="hi">आज बैठेंगे:</span> Today: ' + names.join(', ');
+        // Today's doctors go first, in the hero box and at the top of the list.
+        today.slice().reverse().forEach(function (c) { grid.insertBefore(c, grid.firstChild); });
+        document.getElementById('today-list').innerHTML = today.map(function (c) {
+          return '<li><b>' + c.querySelector('h3').textContent + '</b><span>' + c.querySelector('.spec').innerHTML.replace(/<small>.*<\/small>/, '') +
+            ' · <span class="t">' + c.getAttribute('data-time') + '</span></span></li>';
+        }).join('');
         document.getElementById('yr').textContent = new Date().getFullYear();
       } catch (e) {}
     })();
