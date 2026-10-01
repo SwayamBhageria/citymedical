@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>City Medical – Medical Store in Chakradharpur (CKP) | सिटी मेडिकल चक्रधरपुर</title>
-  <meta name="description" content="City Medical (सिटी मेडिकल) – medical store at Bank of Baroda Building, Main Road, Pawan Chowk, Chakradharpur (CKP). Allopathic &amp; Ayurvedic medicines, surgical equipment, cosmetics; orthopaedic, skin and diabetes specialist doctors. Open daily 9 AM–10 PM. Call/WhatsApp 93418 33823." />
+  <meta name="description" content="City Medical (सिटी मेडिकल) – medical store at Bank of Baroda Building, Main Road, Pawan Chowk, Chakradharpur (CKP). Allopathic &amp; Ayurvedic medicines, surgical equipment, cosmetics; daily general physician; orthopaedic, skin, diabetes and neuro-psychiatry specialists. Open daily 9 AM–10 PM. Call/WhatsApp 93418 33823." />
   <meta name="google-site-verification" content="LqZGoXK2UvwWEmuE9ZazoWHVqf-NSvxHgLvM6qgClSk" />
   <link rel="canonical" href="https://swayambhageria.github.io/citymedical/" />
   <meta name="theme-color" content="#0d5c36" />
@@ -189,6 +189,13 @@
     .doc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
     .doc li { font-size: .85rem; border: 1px solid var(--line); border-radius: 8px; padding: 1px 9px; }
     .docs-note { margin-top: 16px; color: var(--muted); }
+    .doc[data-when="daily"] { grid-column: 1 / -1; }
+    .doc .when { display: grid; gap: 2px; padding: 10px 12px; border-radius: 10px; background: color-mix(in srgb, var(--cross) 10%, var(--surface)); }
+    .doc .when b { font-weight: 600; line-height: 1.3; }
+    .doc .when span { font-size: .88rem; color: var(--muted); }
+    .doc.is-today { border-color: var(--cross); box-shadow: 0 0 0 2px var(--cross); }
+    .doc .today-tag { justify-self: start; background: var(--cross); color: #fff; font-weight: 600; font-size: .8rem; border-radius: 99px; padding: 1px 10px; }
+    .today-line { margin: -6px 0 18px; font-weight: 600; }
     .rx { margin-top: 18px; padding: 20px 22px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; border-style: dashed; border-width: 2px; }
     .rx p { min-width: 0; flex: 1 1 320px; }
     .rx b { font-family: var(--display); font-size: 1.25rem; display: block; line-height: 1.2; }
@@ -198,8 +205,8 @@
     .hours-box { padding: 22px; }
     .big-time { font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 7vw, 2.6rem); line-height: 1.1; font-variant-numeric: tabular-nums; }
     .days { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
-    .days span { border: 1px solid var(--line); border-radius: 8px; padding: 2px 10px; font-size: .9rem; }
-    .days span.today { background: var(--board); color: var(--board-ink); border-color: var(--board); }
+    .days > span { border: 1px solid var(--line); border-radius: 8px; padding: 2px 10px; font-size: .9rem; }
+    .days > span.today { background: var(--board); color: var(--board-ink); border-color: var(--board); }
     .review { padding: 22px; display: grid; gap: 12px; align-content: start; }
     .review b { font-family: var(--display); font-size: 1.3rem; line-height: 1.2; }
 
@@ -317,7 +324,7 @@
             <p><span lang="hi">डॉक्टर की पर्ची वाली और आम, सभी तरह की दवाइयाँ।</span> All types of prescription and over-the-counter medicines.</p></div></div>
           <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v3a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="12" r="2"/></svg></div>
             <div><h3><span lang="hi">डॉक्टर परामर्श</span><span class="en">Doctor consultation</span></h3>
-            <p><span lang="hi">हड्डी, चर्म रोग और शुगर विशेषज्ञ।</span> Orthopaedic, skin and diabetes specialists. <a href="#doctors">See doctors</a></p></div></div>
+            <p><span lang="hi">जनरल फिज़िशियन रोज़; हड्डी, चर्म रोग, शुगर और न्यूरो विशेषज्ञ तय दिनों पर।</span> General physician daily; orthopaedic, skin, diabetes and neuro-psychiatry specialists on set days. <a href="#doctors">See doctors</a></p></div></div>
           <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M12 11v5M9.5 13.5h5"/></svg></div>
             <div><h3><span lang="hi">मेडिकल और सर्जिकल उपकरण</span><span class="en">Medical &amp; surgical equipment</span></h3>
             <p><span lang="hi">फर्स्ट-एड से लेकर सर्जिकल सामान तक।</span> From first aid to surgical equipment.</p></div></div>
@@ -356,34 +363,44 @@
 
     <section id="doctors">
       <div class="wrap">
-        <h2 class="sec-h"><span lang="hi">हमारे डॉक्टर</span><span class="en">Doctors available at City Medical</span></h2>
+        <h2 class="sec-h"><span lang="hi">हमारे डॉक्टर</span><span class="en">Doctors at City Medical</span></h2>
+        <p class="today-line" id="today-line"><span lang="hi">डॉक्टर रोज़ बैठते हैं — नीचे हर डॉक्टर का दिन और समय देखें।</span> A doctor sits every day. See each doctor's days below.</p>
         <div class="docs">
-          <article class="panel doc">
-            <div class="spec"><span lang="hi">हड्डी रोग विशेषज्ञ</span><small>Consultant Orthopaedic Surgeon</small></div>
+          <article class="panel doc" data-when="daily">
+            <div class="spec"><span lang="hi">जनरल फिज़िशियन</span><small>General physician</small></div>
+            <h3>Dr. Ashok</h3>
+            <p class="when"><b lang="hi">रोज़ · सुबह 11 – 1 और शाम 6 – 8</b><span>Every day · 11 AM – 1 PM and 6 – 8 PM</span></p>
+            <ul><li><span lang="hi">बुखार, सर्दी-खाँसी</span> Fever, cold, cough</li><li><span lang="hi">सिरदर्द, पेट दर्द</span> Headache, stomach pain</li><li><span lang="hi">उल्टी, दस्त</span> Vomiting, diarrhoea</li><li><span lang="hi">कमज़ोरी, थकान</span> Weakness</li><li><span lang="hi">एलर्जी, गैस, एसिडिटी</span> Allergy, acidity</li><li><span lang="hi">बीपी, डायबिटीज़</span> BP, diabetes</li><li><span lang="hi">इन्फेक्शन</span> Infections</li></ul>
+          </article>
+          <article class="panel doc" data-when="0">
+            <div class="spec"><span lang="hi">शुगर (डायबिटीज़) विशेषज्ञ</span><small>Diabetologist &amp; consultant physician</small></div>
+            <h3>Dr. Shishir Kumar</h3>
+            <p class="when"><b lang="hi">हर रविवार · शाम 5 – 8</b><span>Every Sunday · 5 – 8 PM</span></p>
+            <p class="deg">MBBS (RIMS), MD (RIMS), CCEBDM (PHFI, New Delhi)<br />Ex Senior Resident, AIIMS · Trained in diabetes management, CMC Vellore</p>
+          </article>
+          <article class="panel doc" data-when="3">
+            <div class="spec"><span lang="hi">चर्म रोग विशेषज्ञ</span><small>Skin (dermatology) specialist</small></div>
+            <h3>Dr. U K Jaiswal</h3>
+            <p class="when"><b lang="hi">हर बुधवार · दोपहर 2 – 4</b><span>Every Wednesday · 2 – 4 PM</span></p>
+            <p class="deg">MBBS (Pat.), PGCC in Skin &amp; STDs (NHS-UK)<br />Ex Resident Doctor, Dept. of Dermatology &amp; VD, AIIMS</p>
+            <ul><li><span lang="hi">त्वचा रोग</span> Skin diseases</li><li><span lang="hi">गुप्त रोग</span> Sexually transmitted diseases</li></ul>
+          </article>
+          <article class="panel doc" data-when="4:1,3">
+            <div class="spec"><span lang="hi">हड्डी रोग विशेषज्ञ</span><small>Consultant orthopaedic surgeon</small></div>
             <h3>Dr. Puneet Prakash</h3>
-            <p class="deg">MBBS, MS, DNB, MRCS (Glasgow), FIAS<br />Ex Senior Resident, Manipal &amp; RIMS · Ex Consultant, TMH<br />Reg. No. JMC 4620</p>
+            <p class="when"><b lang="hi">हर महीने का पहला और तीसरा गुरुवार</b><span>1st &amp; 3rd Thursday of every month · call for time</span></p>
+            <p class="deg">MBBS, MS, DNB, MRCS (Glasgow), FIAS<br />Ex Senior Resident, Manipal &amp; RIMS · Ex Consultant, TMH · Reg. No. JMC 4620</p>
             <ul><li><span lang="hi">जोड़ों का दर्द</span> Joint pain</li><li><span lang="hi">रीढ़</span> Spine</li><li>Sports injury</li><li>Trauma</li></ul>
           </article>
-          <article class="panel doc">
-            <div class="spec"><span lang="hi">हड्डी रोग विशेषज्ञ</span><small>Orthopaedics</small></div>
-            <h3>Dr. Ravi Kaushal</h3>
-            <p class="deg">MBBS (Hons), DNB (Ortho)</p>
-            <ul><li><span lang="hi">कमर, घुटने का दर्द</span> Back &amp; knee pain</li><li><span lang="hi">फ्रैक्चर</span> Fractures</li></ul>
-          </article>
-          <article class="panel doc">
-            <div class="spec"><span lang="hi">चर्म रोग विशेषज्ञ</span><small>Skin specialist</small></div>
-            <h3>Dr. U K Jaiswal</h3>
-            <p class="deg">MBBS, PGCC in Skin &amp; STDs (NHS-UK)<br />Ex Resident Doctor, AIIMS</p>
-            <ul><li><span lang="hi">दाद, खाज, खुजली</span> Fungal infection, itching</li><li><span lang="hi">चेहरे के दाग</span> Facial spots</li><li><span lang="hi">बाल झड़ना</span> Hair fall</li></ul>
-          </article>
-          <article class="panel doc">
-            <div class="spec"><span lang="hi">शुगर (मधुमेह) विशेषज्ञ एवं फिज़िशियन</span><small>Diabetes &amp; physician</small></div>
-            <h3>Dr. Shishir Kumar</h3>
-            <p class="deg">MBBS (RIMS), MD (RIMS)</p>
-            <ul><li><span lang="hi">शुगर</span> Diabetes</li><li><span lang="hi">सर्दी, खाँसी, बुखार</span> Cold, cough, fever</li><li><span lang="hi">पेट दर्द</span> Stomach pain</li></ul>
+          <article class="panel doc" data-when="6:1,3">
+            <div class="spec"><span lang="hi">न्यूरो और मानसिक रोग विशेषज्ञ</span><small>Neuro &amp; psychiatry</small></div>
+            <h3>Dr. Devdatta Pati</h3>
+            <p class="when"><b lang="hi">हर महीने का पहला और तीसरा शनिवार · सुबह 10 – 12</b><span>1st &amp; 3rd Saturday of every month · 10 AM – 12 PM</span></p>
+            <p class="deg">MBBS, DPM (Psychiatry), MD (Psychiatry), CIP Ranchi<br />Attached to B.P. Poddar Hospital, Apollo Hospital and Belle Vue Hospital, Kolkata</p>
+            <ul><li>Neuropsychiatry</li><li>Child psychiatry</li><li><span lang="hi">नशा मुक्ति</span> De-addiction</li><li>Sexology</li></ul>
           </article>
         </div>
-        <p class="docs-note"><span lang="hi">डॉक्टर के दिन और समय के लिए पहले कॉल करें:</span> Call 93418 33823 for each doctor's days and timing.</p>
+        <p class="docs-note"><span lang="hi">आने से पहले एक बार कॉल करके पक्का कर लें:</span> Please call 93418 33823 to confirm before you come.</p>
       </div>
     </section>
 
@@ -418,7 +435,7 @@
         <details><summary><span><span lang="hi">क्या आने से पहले दवा के बारे में पूछ सकते हैं?</span> <span class="en">Can I check if a medicine is available first?</span></span></summary>
           <p><span lang="hi">हाँ, 93418 33823 पर कॉल या WhatsApp करें, या पर्ची की फोटो भेजें।</span> Yes. Call or WhatsApp 93418 33823 with the medicine name or a photo of the prescription.</p></details>
         <details><summary><span><span lang="hi">क्या यहाँ डॉक्टर बैठते हैं?</span> <span class="en">Is a doctor available at City Medical?</span></span></summary>
-          <p><span lang="hi">हाँ — हड्डी रोग (Dr. Puneet Prakash, Dr. Ravi Kaushal), चर्म रोग (Dr. U K Jaiswal) और शुगर/फिज़िशियन (Dr. Shishir Kumar)। समय के लिए पहले कॉल करें।</span> Yes: orthopaedics (Dr. Puneet Prakash, Dr. Ravi Kaushal), skin (Dr. U K Jaiswal) and diabetes/physician (Dr. Shishir Kumar). Call first for timings.</p></details>
+          <p><span lang="hi">हाँ। जनरल फिज़िशियन Dr. Ashok रोज़ (सुबह 11–1, शाम 6–8)। शुगर: Dr. Shishir Kumar (रविवार 5–8)। चर्म रोग: Dr. U K Jaiswal (बुधवार 2–4)। हड्डी: Dr. Puneet Prakash (पहला व तीसरा गुरुवार)। न्यूरो/मानसिक रोग: Dr. Devdatta Pati (पहला व तीसरा शनिवार 10–12)।</span> Yes. General physician Dr. Ashok daily (11 AM–1 PM, 6–8 PM); diabetes Dr. Shishir Kumar (Sun 5–8 PM); skin Dr. U K Jaiswal (Wed 2–4 PM); orthopaedics Dr. Puneet Prakash (1st &amp; 3rd Thu); neuro-psychiatry Dr. Devdatta Pati (1st &amp; 3rd Sat 10 AM–12 PM).</p></details>
       </div>
     </section>
   </main>
@@ -455,6 +472,19 @@
           : '<span lang="hi">अभी बंद है</span> · Closed now, opens 9 AM';
         var d = document.querySelector('#days [data-d="' + day + '"]');
         if (d) d.classList.add('today');
+        var date = +new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', day: 'numeric' }).format(new Date());
+        var nth = Math.ceil(date / 7), names = [];
+        document.querySelectorAll('.doc[data-when]').forEach(function (card) {
+          var w = card.getAttribute('data-when'), on;
+          if (w === 'daily') on = true;
+          else { var pr = w.split(':'); on = +pr[0] === day && (!pr[1] || pr[1].split(',').indexOf(String(nth)) > -1); }
+          if (!on) return;
+          card.classList.add('is-today');
+          var tag = document.createElement('span'); tag.className = 'today-tag'; tag.innerHTML = '<span lang="hi">आज</span> · Today';
+          card.insertBefore(tag, card.firstChild);
+          names.push(card.querySelector('h3').textContent);
+        });
+        if (names.length) document.getElementById('today-line').innerHTML = '<span lang="hi">आज बैठेंगे:</span> Today: ' + names.join(', ');
         document.getElementById('yr').textContent = new Date().getFullYear();
       } catch (e) {}
     })();
