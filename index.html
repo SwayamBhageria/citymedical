@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>City Medical – Medical Store in Chakradharpur (CKP) | सिटी मेडिकल चक्रधरपुर</title>
-  <meta name="description" content="City Medical (सिटी मेडिकल) – medical store below Bank of Baroda, Pawan Chowk, Main Road, Chakradharpur (CKP). Medicines, medical supplies, doctor consultation. Open daily 9 AM–10 PM. Call/WhatsApp 93418 33823." />
+  <meta name="description" content="City Medical (सिटी मेडिकल) – medical store below Bank of Baroda, Pawan Chowk, Main Road, Chakradharpur (CKP). Medicines, medical supplies; orthopaedic, skin and diabetes specialist doctors. Open daily 9 AM–10 PM. Call/WhatsApp 93418 33823." />
+  <meta name="google-site-verification" content="LqZGoXK2UvwWEmuE9ZazoWHVqf-NSvxHgLvM6qgClSk" />
   <link rel="canonical" href="https://swayambhageria.github.io/citymedical/" />
   <meta name="theme-color" content="#0d5c36" />
   <meta property="og:type" content="website" />
@@ -157,6 +158,18 @@
     .svc h3 .en { font-size: .7em; }
     .svc p { color: var(--muted); font-size: .95rem; margin-top: 6px; }
 
+    .docs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    @media (max-width: 640px) { .docs { grid-template-columns: 1fr; } }
+    .doc { padding: 20px 22px; display: grid; gap: 8px; align-content: start; }
+    .doc .spec { font-family: var(--display); font-weight: 800; font-size: 1.1rem; color: var(--board); line-height: 1.25; }
+    :root[data-theme="dark"] .doc .spec { color: var(--cross); }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .doc .spec { color: var(--cross); } }
+    .doc .spec small { display: block; font-family: var(--body); font-weight: 600; font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+    .doc h3 { font-size: 1.35rem; font-weight: 800; }
+    .doc .deg { font-size: .9rem; color: var(--muted); line-height: 1.45; }
+    .doc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+    .doc li { font-size: .85rem; border: 1px solid var(--line); border-radius: 8px; padding: 1px 9px; }
+    .docs-note { margin-top: 16px; color: var(--muted); }
     .rx { margin-top: 18px; padding: 20px 22px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; border-style: dashed; border-width: 2px; }
     .rx p { min-width: 0; flex: 1 1 320px; }
     .rx b { font-family: var(--display); font-size: 1.25rem; display: block; line-height: 1.2; }
@@ -262,7 +275,7 @@
             <p><span lang="hi">डॉक्टर की पर्ची वाली और आम दवाइयाँ।</span> Prescription and over-the-counter medicines.</p></div></div>
           <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v3a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="12" r="2"/></svg></div>
             <div><h3><span lang="hi">डॉक्टर परामर्श</span><span class="en">Doctor consultation</span></h3>
-            <p><span lang="hi">दुकान पर डॉक्टर से सलाह। समय के लिए पहले कॉल करें।</span> Call ahead for the doctor's timing.</p></div></div>
+            <p><span lang="hi">हड्डी, चर्म रोग और शुगर विशेषज्ञ।</span> Orthopaedic, skin and diabetes specialists. <a href="#doctors">See doctors</a></p></div></div>
           <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M12 11v5M9.5 13.5h5"/></svg></div>
             <div><h3><span lang="hi">मेडिकल का सामान</span><span class="en">Medical supplies</span></h3>
             <p><span lang="hi">फर्स्ट-एड से लेकर रोज़ की ज़रूरत तक।</span> From first aid to daily-care essentials.</p></div></div>
@@ -275,6 +288,40 @@
             <span lang="hi">आने से पहले पूछ लें कि दवा है या नहीं।</span> Send a photo of your prescription and we'll tell you if it's in stock.</p>
           <a class="btn btn-wa" href="https://wa.me/919341833823"><span>WhatsApp 93418 33823</span></a>
         </div>
+      </div>
+    </section>
+
+
+    <section id="doctors">
+      <div class="wrap">
+        <h2 class="sec-h"><span lang="hi">हमारे डॉक्टर</span><span class="en">Doctors available at City Medical</span></h2>
+        <div class="docs">
+          <article class="panel doc">
+            <div class="spec"><span lang="hi">हड्डी रोग विशेषज्ञ</span><small>Consultant Orthopaedic Surgeon</small></div>
+            <h3>Dr. Puneet Prakash</h3>
+            <p class="deg">MBBS, MS, DNB, MRCS (Glasgow), FIAS<br />Ex Senior Resident, Manipal &amp; RIMS · Ex Consultant, TMH<br />Reg. No. JMC 4620</p>
+            <ul><li><span lang="hi">जोड़ों का दर्द</span> Joint pain</li><li><span lang="hi">रीढ़</span> Spine</li><li>Sports injury</li><li>Trauma</li></ul>
+          </article>
+          <article class="panel doc">
+            <div class="spec"><span lang="hi">हड्डी रोग विशेषज्ञ</span><small>Orthopaedics</small></div>
+            <h3>Dr. Ravi Kaushal</h3>
+            <p class="deg">MBBS (Hons), DNB (Ortho)</p>
+            <ul><li><span lang="hi">कमर, घुटने का दर्द</span> Back &amp; knee pain</li><li><span lang="hi">फ्रैक्चर</span> Fractures</li></ul>
+          </article>
+          <article class="panel doc">
+            <div class="spec"><span lang="hi">चर्म रोग विशेषज्ञ</span><small>Skin specialist</small></div>
+            <h3>Dr. U K Jaiswal</h3>
+            <p class="deg">MBBS, PGCC in Skin &amp; STDs (NHS-UK)<br />Ex Resident Doctor, AIIMS</p>
+            <ul><li><span lang="hi">दाद, खाज, खुजली</span> Fungal infection, itching</li><li><span lang="hi">चेहरे के दाग</span> Facial spots</li><li><span lang="hi">बाल झड़ना</span> Hair fall</li></ul>
+          </article>
+          <article class="panel doc">
+            <div class="spec"><span lang="hi">शुगर (मधुमेह) विशेषज्ञ एवं फिज़िशियन</span><small>Diabetes &amp; physician</small></div>
+            <h3>Dr. Shishir Kumar</h3>
+            <p class="deg">MBBS (RIMS), MD (RIMS)</p>
+            <ul><li><span lang="hi">शुगर</span> Diabetes</li><li><span lang="hi">सर्दी, खाँसी, बुखार</span> Cold, cough, fever</li><li><span lang="hi">पेट दर्द</span> Stomach pain</li></ul>
+          </article>
+        </div>
+        <p class="docs-note"><span lang="hi">डॉक्टर के दिन और समय के लिए पहले कॉल करें:</span> Call 93418 33823 for each doctor's days and timing.</p>
       </div>
     </section>
 
@@ -309,7 +356,7 @@
         <details><summary><span><span lang="hi">क्या आने से पहले दवा के बारे में पूछ सकते हैं?</span> <span class="en">Can I check if a medicine is available first?</span></span></summary>
           <p><span lang="hi">हाँ, 93418 33823 पर कॉल या WhatsApp करें, या पर्ची की फोटो भेजें।</span> Yes. Call or WhatsApp 93418 33823 with the medicine name or a photo of the prescription.</p></details>
         <details><summary><span><span lang="hi">क्या यहाँ डॉक्टर बैठते हैं?</span> <span class="en">Is a doctor available at City Medical?</span></span></summary>
-          <p><span lang="hi">हाँ, डॉक्टर परामर्श उपलब्ध है। डॉक्टर का समय जानने के लिए पहले कॉल करें।</span> Yes, doctor consultation is available. Call first to confirm the doctor's timing.</p></details>
+          <p><span lang="hi">हाँ — हड्डी रोग (Dr. Puneet Prakash, Dr. Ravi Kaushal), चर्म रोग (Dr. U K Jaiswal) और शुगर/फिज़िशियन (Dr. Shishir Kumar)। समय के लिए पहले कॉल करें।</span> Yes: orthopaedics (Dr. Puneet Prakash, Dr. Ravi Kaushal), skin (Dr. U K Jaiswal) and diabetes/physician (Dr. Shishir Kumar). Call first for timings.</p></details>
       </div>
     </section>
   </main>
